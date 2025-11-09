@@ -17,7 +17,7 @@ def main():
     match cmd:
         case "add": add_task()
         case "delete": delete_task()
-        # case "update": update_task()
+        case "update": update_task()
         # case "mark-in-progress": mark_in_progress()
         # case "mark-done": mark_done()
         # case "list": show_tasks()
@@ -81,6 +81,28 @@ def delete_task():
         with open("tasks.json", "w") as file:
             json.dump(data, file)
 
+def update_task():
+    try:
+        task_id = int(sys.argv[2])
+        new_task_name = sys.argv[3]
+        with open("tasks.json", "r") as file:
+            lines = json.load(file)
+            print(lines)
+    except IndexError:
+        sys.exit("Missing arguments")
+    except json.decoder.JSONDecodeError:
+        print("Tasks list is empty.")
+        pass
+    except ValueError:
+        sys.exit("Enter a valid id")
 
+    else:
+        data = []
+        for line in lines:
+            if line["id"] == task_id:
+                line["description"]= new_task_name
+                data.append(line)
+        with open("tasks.json", "w") as file:
+            json.dump(data, file)
 
 main()
