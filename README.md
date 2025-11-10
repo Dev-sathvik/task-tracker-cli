@@ -33,7 +33,7 @@ You can add, update, delete, and mark tasks as done or in progress — all from 
 Run the program using Python:
 
 ```bash
-python task_cli.py <command> [arguments]
+python task-tracker-cli.py <command> [arguments]
 ```
 
 ---
@@ -42,32 +42,30 @@ python task_cli.py <command> [arguments]
 
 ```bash
 # Add a new task
-python task_cli.py add "Buy groceries"
+python task-tracker-cli.py add "Buy groceries"
 
 # Update a task
-python task_cli.py update 1 "Buy groceries and cook dinner"
+python task-tracker-cli.py update 1 "Buy groceries and cook dinner"
 
 # Delete a task
-python task_cli.py delete 1
+python task-tracker-cli.py delete 1
 
 # Mark a task as in progress
-python task_cli.py mark-in-progress 1
+python task-tracker-cli.py mark-in-progress 1
 
 # Mark a task as done
-python task_cli.py mark-done 1
+python task-tracker-cli.py mark-done 1
 
 # List all tasks
-python task_cli.py list
+python task-tracker-cli.py list
 
 # List tasks by status
-python task_cli.py list done
-python task_cli.py list todo
-python task_cli.py list in-progress
+python task-tracker-cli.py list done
+python task-tracker-cli.py list todo
+python task-tracker-cli.py list in-progress
 ```
-
 
 **Author:** Sathvik
 **GitHub:** [Dev-sathvik](https://github.com/Dev-sathvik)
 
 ---
-
