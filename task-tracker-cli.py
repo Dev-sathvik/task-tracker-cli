@@ -1,9 +1,9 @@
 import sys, json
 from datetime import date
 
-
 id  = 0
 def main():
+
     #usage python task-name task parameters(optional)
     global id 
     with open("count.txt", "r") as file:
