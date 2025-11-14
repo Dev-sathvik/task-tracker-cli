@@ -2,3 +2,6 @@ venv
 count.txt
 tasks.json
 .vscode
+test_task_tracker_cli.py
+__pycache__/
+.pytest_cache
