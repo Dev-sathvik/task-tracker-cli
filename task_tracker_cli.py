@@ -1,9 +1,16 @@
+#!/usr/bin/env python3
+
 import sys
 import json
+import os
 from datetime import date
 
-JSON_FILE = "tasks.json"
-COUNT_FILE = "count.txt"
+config_dir = os.path.expanduser("~/.config/task-cli")
+
+os.makedirs(config_dir, exist_ok=True)
+
+COUNT_FILE = os.path.join(config_dir, "count.txt")
+JSON_FILE = os.path.join(config_dir, "tasks.json")
 
 
 def main():

@@ -1,4 +1,3 @@
----
 
 # Task Tracker CLI
 
@@ -9,31 +8,25 @@ You can add, update, delete, and mark tasks as done or in progress — all from 
 
 ## Installation
 
-1. **Clone the repository**
+1.**Clone the repository**
 
-   ```bash
-   git clone https://github.com/Dev-sathvik/task-tracker-cli.git
-   cd task-tracker-cli
-   ```
+```bash
+git clone https://github.com/Dev-sathvik/task-tracker-cli.git && cd task-tracker-cli
+```
 
-2. **(Optional) Create and activate a virtual environment**
+2.**Rename the *task_tracker_cli.py* into *task-cli* and copy it into the */usr/local/bin* and make it executable**
 
-   ```bash
-   python -m venv venv
-   # Windows
-   venv\Scripts\activate
-   # macOS/Linux
-   source venv/bin/activate
-   ```
+```bash
+sudo cp task_tracker_cli.py /usr/local/bin/task-cli && sudo chmod +x /usr/local/bin/task-cli
+```
 
----
 
 ## How to Run
 
-Run the program using Python:
+Run the program in terminal:
 
 ```bash
-python task-tracker-cli.py <command> [arguments]
+task-cli <command> [arguments]
 ```
 
 ---
@@ -41,31 +34,31 @@ python task-tracker-cli.py <command> [arguments]
 ## Examples
 
 ```bash
-# Add a new task
-python task-tracker-cli.py add "Buy groceries"
+# Adding a new task
+task-cli add "Buy groceries"
+# Output: Task added successfully (ID: 1)
 
-# Update a task
-python task-tracker-cli.py update 1 "Buy groceries and cook dinner"
+# Updating and deleting tasks
+task-cli update 1 "Buy groceries and cook dinner"
+task-cli delete 1
 
-# Delete a task
-python task-tracker-cli.py delete 1
+# Marking a task as in progress or done
+task-cli mark-in-progress 1
+task-cli mark-done 1
 
-# Mark a task as in progress
-python task-tracker-cli.py mark-in-progress 1
+# Listing all tasks
+task-cli list
 
-# Mark a task as done
-python task-tracker-cli.py mark-done 1
+# Listing tasks by status
+task-cli list done
+task-cli list todo
+task-cli list in-progress
 
-# List all tasks
-python task-tracker-cli.py list
-
-# List tasks by status
-python task-tracker-cli.py list done
-python task-tracker-cli.py list todo
-python task-tracker-cli.py list in-progress
 ```
+---
 
-**Author:** Sathvik
-**GitHub:** [Dev-sathvik](https://github.com/Dev-sathvik)
+**Author:** Sathvik  
+**GitHub:** [Dev-sathvik](https://github.com/Dev-sathvik)  
+**Problem Statement:** https://roadmap.sh/projects/task-tracker
 
 ---
